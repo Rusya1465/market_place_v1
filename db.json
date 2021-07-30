@@ -1,0 +1,30 @@
+{
+  "products": [
+    {
+      "title": "Iphone 12 pro max",
+      "description": "Good Phone",
+      "price": "14000",
+      "author": "Steve Jobs",
+      "discount": "10",
+      "phone": "+99765646546",
+      "category": "128gb",
+      "image": "https://avatars.mds.yandex.net/get-o-yandex/3909167/380d05b8-66e3-49ba-9025-90c13f9f99c3/778x438",
+      "countInStock": "30",
+      "storeAddress": "Apple Store",
+      "id": 3
+    },
+    {
+      "title": "Samsung tv 34343",
+      "description": "TV NEW",
+      "price": "1242",
+      "author": "Nezn",
+      "discount": "10",
+      "phone": "+95645645645",
+      "category": "64564",
+      "image": "https://energoboom.ru/img/700/697243_televizor_samsung_ue43tu8500u-3101.jpeg",
+      "countInStock": "45345",
+      "storeAddress": "samsung",
+      "id": 4
+    }
+  ]
+}
