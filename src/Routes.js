@@ -1,17 +1,28 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import AdminPanel from "./containers/AdminPanel/AdminPanel";
+import SighIn from "./containers/Auth/SighIn";
+import SignUp from "./containers/Auth/SignUp";
+import Home from "./containers/Home/Home";
+import PrimarySearchAppBar from "./containers/Home/MenuAppBar";
 import AdminContextProvider from "./contexts/AdminContext";
+import ClientContextProvider from "./contexts/ClientContext";
 
 const Routes = () => {
   return (
-    <AdminContextProvider>
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/admin" component={AdminPanel} />
-        </Switch>
-      </BrowserRouter>
-    </AdminContextProvider>
+    <ClientContextProvider>
+      <AdminContextProvider>
+        <BrowserRouter>
+          <PrimarySearchAppBar />
+          <Switch>
+            <Route exact path="/admin" component={AdminPanel} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/signin" component={SighIn} />
+            <Route exact path="/signup" component={SignUp} />
+          </Switch>
+        </BrowserRouter>
+      </AdminContextProvider>
+    </ClientContextProvider>
   );
 };
 
