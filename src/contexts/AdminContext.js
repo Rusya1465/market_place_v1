@@ -6,12 +6,15 @@ export const adminContext = React.createContext();
 
 const INIT_STATE = {
   products: null,
+  productToEdit: null,
 };
 
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case "GET_PRODUCTS":
       return { ...state, products: action.payload };
+    case "GET_PRODUCT_TO_EDIT":
+      return { ...state, productToEdit: action.payload };
     default:
       return state;
   }
@@ -36,6 +39,18 @@ const AdminContextProvider = ({ children }) => {
     await axios.delete(`${JSON_API}/${id}`);
     getProducts();
   };
+  const getProductToEdit = async (id) => {
+    const { data } = await axios(`${JSON_API}/${id}`);
+    dispatch({
+      type: "GET_PRODUCT_TO_EDIT",
+      payload: data,
+    });
+    // console.log(data);
+  };
+  const saveEditedProduct = async (product) => {
+    await axios.patch(`${JSON_API}/${product.id}`, product);
+    getProducts();
+  };
 
   return (
     <adminContext.Provider
@@ -44,6 +59,9 @@ const AdminContextProvider = ({ children }) => {
         products: state.products,
         getProducts,
         deleteProduct,
+        productToEdit: state.productToEdit,
+        getProductToEdit,
+        saveEditedProduct,
       }}
     >
       {children}

@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "title": "Iphone 12 pro max",
+      "title": "Iphone 12 pro maxxx",
       "description": "Good Phone",
       "price": "14000",
       "author": "Steve Jobs",
@@ -25,6 +25,19 @@
       "countInStock": "45345",
       "storeAddress": "samsung",
       "id": 4
+    },
+    {
+      "title": "fdgdfgd",
+      "description": "gfdgdfg",
+      "price": "65756756",
+      "author": "tryrtyrty",
+      "discount": "67",
+      "phone": "6756756865",
+      "category": "657",
+      "image": "https://yandex.ru/images/search?pos=2&from=tabbar&img_url=https%3A%2F%2Fmagazun.com%2Fimages%2Fdetailed%2F183%2F0042cc89-da7a-11e7-a20e-94de8000916c.jpg&text=samsung&rpt=simage",
+      "countInStock": "45",
+      "storeAddress": "store",
+      "id": 5
     }
   ]
 }
