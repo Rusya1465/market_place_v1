@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { alpha, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -15,6 +15,8 @@ import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import { Link, useHistory } from "react-router-dom";
+import { ShoppingBasket } from "@material-ui/icons";
+import { clientContext } from "../../contexts/ClientContext";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -84,7 +86,7 @@ export default function PrimarySearchAppBar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-
+  const { productsCountInCart } = useContext(clientContext);
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
@@ -202,11 +204,13 @@ export default function PrimarySearchAppBar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <MailIcon />
-              </Badge>
-            </IconButton>
+            <Link to="/cart">
+              <IconButton aria-label="show 4 new mails" color="inherit">
+                <Badge badgeContent={productsCountInCart} color="secondary">
+                  <ShoppingBasket />
+                </Badge>
+              </IconButton>
+            </Link>
             <IconButton aria-label="show 17 new notifications" color="inherit">
               <Badge badgeContent={17} color="secondary">
                 <NotificationsIcon />

@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import AdminPanel from "./containers/AdminPanel/AdminPanel";
 import SighIn from "./containers/Auth/SighIn";
 import SignUp from "./containers/Auth/SignUp";
+import Cart from "./containers/Cart/Cart";
 import Home from "./containers/Home/Home";
 import PrimarySearchAppBar from "./containers/Home/MenuAppBar";
 import AdminContextProvider from "./contexts/AdminContext";
@@ -19,6 +20,7 @@ const Routes = () => {
             <Route exact path="/" component={Home} />
             <Route exact path="/signin" component={SighIn} />
             <Route exact path="/signup" component={SignUp} />
+            <Route exact path="/cart" component={Cart} />
           </Switch>
         </BrowserRouter>
       </AdminContextProvider>

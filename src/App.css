@@ -3,3 +3,14 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.cart td {
+  padding: 10px 50px;
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+}
