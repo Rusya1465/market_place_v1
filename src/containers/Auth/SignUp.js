@@ -1,8 +1,10 @@
 import React, { useContext, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { clientContext } from "../../contexts/ClientContext";
 
 const SignUp = () => {
   const { registerUser } = useContext(clientContext);
+  const history = useHistory();
   const [newUser, SetNewUser] = useState({
     email: "",
     password: "",
@@ -14,15 +16,12 @@ const SignUp = () => {
       [e.target.name]: e.target.value,
     };
     SetNewUser(obj);
-    console.log(newUser);
+    // console.log(newUser);
   };
 
   const handleClick = () => {
-    registerUser(newUser);
-    SetNewUser({
-      email: "",
-      password: "",
-    });
+    // console.log(newUser);
+    registerUser(newUser, history);
   };
   return (
     <div>

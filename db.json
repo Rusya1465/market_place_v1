@@ -27,7 +27,7 @@
       "id": 4
     },
     {
-      "title": "fdgdfgd",
+      "title": "web-camera",
       "description": "gfdgdfg",
       "price": "65756756",
       "author": "tryrtyrty",
@@ -38,6 +38,58 @@
       "countInStock": "45",
       "storeAddress": "store",
       "id": 5
+    },
+    {
+      "title": "Xiaomi mi 11",
+      "description": "super phone",
+      "price": "15000",
+      "author": "china",
+      "discount": "10",
+      "phone": "+999546546546",
+      "category": "128",
+      "image": "https://smarfony.ru/wp-content/uploads/2021/03/xiaomi-mi-11-pro.jpg",
+      "countInStock": "10",
+      "storeAddress": "xiaomi.kg",
+      "id": 6
+    },
+    {
+      "title": "Honor 20 lite",
+      "description": "super honor phone",
+      "price": "12000",
+      "author": "china",
+      "discount": "5",
+      "phone": "+99670074353",
+      "category": "128",
+      "image": "https://im0-tub-ru.yandex.net/i?id=73c02d35d43ceb45600cf24d12b15cc7&ref=rim&n=33&w=132&h=150",
+      "countInStock": "10",
+      "storeAddress": "Цум/Подвал",
+      "id": 7
+    },
+    {
+      "title": "Samsung galaxy z-flip",
+      "description": "super super phone",
+      "price": "24000",
+      "author": "Aibek",
+      "discount": "25",
+      "phone": "+99643543534",
+      "category": "512",
+      "image": "https://www.globalphone.sm/3288-small_default/galaxy-z-flip-5g-tim-samsung-sm-f707b.jpg",
+      "countInStock": "10",
+      "storeAddress": "samsung.kg",
+      "id": 8
+    },
+    {
+      "title": "Iphone xr red",
+      "description": "red phone",
+      "price": "31000",
+      "author": "Steve Jobs",
+      "discount": "0",
+      "phone": "+99654645456",
+      "category": "256",
+      "image": "https://main-cdn.goods.ru/hlr-system/97/10/26/29/62/3/100023876020b0.jpg",
+      "countInStock": "5",
+      "storeAddress": "AppleStore.kg",
+      "id": 9
     }
   ]
 }

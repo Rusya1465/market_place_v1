@@ -37,11 +37,23 @@ const ClientContextProvider = ({ children }) => {
     });
   };
 
-  const registerUser = async (newUser) => {
+  const registerUser = async (newUser, history) => {
     try {
-      await axios.post(`${AUTH_API}/api/auth/register`, newUser);
+      const res = await axios.post(`${AUTH_API}/registration`, newUser);
+      history.push("/signin");
+      console.log(res);
     } catch {
       alert("Неправильная почта или пароль");
+    }
+  };
+
+  const loginUser = async (user, history) => {
+    try {
+      const res = await axios.post(`${AUTH_API}/login`, user);
+      console.log(res);
+      history.push("/");
+    } catch {
+      alert("Error");
     }
   };
 
@@ -134,6 +146,7 @@ const ClientContextProvider = ({ children }) => {
         getCart,
         changeCountProduct,
         makeOrder,
+        loginUser,
       }}
     >
       {children}
